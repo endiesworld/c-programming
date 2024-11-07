@@ -12,10 +12,18 @@ int main(void) {
 
     int result = data_a / data_b ;
     float correct_result = (float)data_a / data_b;
+
+    char my_name[] = "Emmanuel" ; // Strings are represented as Array of char in C
+
+    printf("Hello, world! my name is: %s\n", my_name);
+
     printf("This will print an integer/whole number istead of a float or double %i\n", result );
     printf("This will print an integer/whole number istead of a float or double %d\n", (data_a / data_b));
 
     printf("This will print float or double but the value will be wrong %f\n", (float) (data_a / data_b));
     printf("This will print correct value float or double %f\n", correct_result);
     printf("This will print correct value float or double in 2 decimals %0.2f\n", correct_result);
+
+    return 0 ;
+
 }
