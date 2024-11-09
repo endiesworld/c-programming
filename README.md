@@ -17,6 +17,10 @@
 ``` Bash
     A sequence of values in memory in the same data type.
     int my_array[5];
+
+    In C, there is no built-in function to directly get the length of an array, as arrays in C do not store their own size. However, you can determine the length of a statically allocated array (one with a fixed size) using the sizeof operator.
+    > int arr[] = {1, 2, 3, 4, 5};
+    > int length = sizeof(arr) / sizeof(arr[0]);
 ```
 
 ### String
