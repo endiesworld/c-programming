@@ -60,18 +60,53 @@
 
 ### Pointers and Addresses in C
 
+```c
+// # In C, pointers are variables that store the memory address of another variable. Pointers are a powerful feature of C, enabling dynamic memory management, array manipulation, and the ability to pass large structures or arrays efficiently to functions.
+
+// # Basic Concepts
+// # Memory Address: Every variable in C is stored at a specific location in memory, which is represented as an address (a number that points to the variable's location in memory).
+
+// # Pointer: A pointer is a variable that holds the memory address of another variable. It is declared using the * symbol.
+
+int *ptr;  // A pointer to an integer
+int x = 10;
+int *ptr = &x;  // Pointer to x (stores address of x)
+printf("%d", *ptr);  // Dereference ptr to get the value of x (10)
+printf("Address of x: %p", ptr);  // Prints the address of x
+
+```
+
+### malloc in C
+
+```c
+// # In C, malloc (memory allocation) is a standard library function used to dynamically allocate memory during program execution. The function allocates a specified amount of memory and returns a pointer to the beginning of the allocated block. This memory remains available for the program until it is explicitly freed using free.
+
+void *malloc(size_t size);
+
+// # size_t size: The number of bytes of memory to allocate.
+// # Return Value:
+// # On success, it returns a pointer to the allocated memory block (of type void *), which can be cast to any type.
+// # On failure (e.g., if the system cannot allocate the requested memory), it returns NULL.
+// # Key Points:
+// # Dynamic Memory Allocation: malloc allows you to allocate memory during runtime, which is useful for scenarios where the size of the data structure is not known beforehand, or when you need to allocate large blocks of memory (e.g., for arrays or structures).
+
+// # Uninitialized Memory: The memory allocated by malloc is not initialized, meaning it may contain garbage values. It is your responsibility to initialize the memory if needed.
+
+// # Memory Size: The size of memory requested is given in bytes, so you typically use sizeof to determine the correct number of bytes for the data type you want to allocate.
+
+// # Freeing Memory: Memory allocated by malloc should be freed using free when it is no longer needed to avoid memory leaks. You should not free memory that was not dynamically allocated (e.g., stack variables).
+
+```
+
+### Files
+
 ```bash
-# In C, pointers are variables that store the memory address of another variable. Pointers are a powerful feature of C, enabling dynamic memory management, array manipulation, and the ability to pass large structures or arrays efficiently to functions.
-
-# Basic Concepts
-# Memory Address: Every variable in C is stored at a specific location in memory, which is represented as an address (a number that points to the variable's location in memory).
-
-# Pointer: A pointer is a variable that holds the memory address of another variable. It is declared using the * symbol.
-
-> int *ptr;  // A pointer to an integer
-> int x = 10;
-> int *ptr = &x;  // Pointer to x (stores address of x)
-> printf("%d", *ptr);  // Dereference ptr to get the value of x (10)
-> printf("Address of x: %p", ptr);  // Prints the address of x
+> fopen
+> fclose
+> fprintf
+> fscanf
+> fread
+> fwrite
+> fseek
 
 ```
